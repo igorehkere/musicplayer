@@ -1,0 +1,9 @@
+import style from "./Logo.module.css"
+
+export function Logo() {
+    return (
+        <div className={style.logo}>
+            <img src="./src/leftSideBar.png"/>
+        </div>
+    )
+}

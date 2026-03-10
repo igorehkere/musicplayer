@@ -1,0 +1,32 @@
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+.btns span {
+    font-size: 21px;
+    color: white;
+}
+.btns button {
+    height: 48px;
+    width: 48px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    background-color: #212121;
+}
+
+.btns button:hover {
+    cursor: pointer;
+}
+
+.tracks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 808px;
+    height: 110%;
+    background-color: black;
+}
