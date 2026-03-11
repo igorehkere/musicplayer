@@ -1,10 +1,11 @@
 .logo img {
-    height: 110px;
-    width: 240px;
+    height: 100px;
+    width: 200px;
 }
 
 .logo {
-    position: absolute;
-    left: 0;
+    z-index: 3;
+    background-color: #212121;
+    position: sticky;
     top: 0;
 }

@@ -1,8 +1,14 @@
 .btns {
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 102px;
     gap: 10px;
     padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    z-index: 2;
 }
 
 .btns span {
@@ -22,11 +28,48 @@
     cursor: pointer;
 }
 
+.track {
+    display: flex;
+    width: 500px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 6px;
+    background-color: black;
+    position: sticky;
+    top: 210px;
+    overflow: hidden;
+    outline: 1px solid rgba(0, 0, 0, 0.3);
+    outline-offset: 4px;
+}
+.track:hover {
+    cursor: pointer;
+    border: 2px solid green;
+}
+.trackElem {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.track span {
+    color: white;
+}
+.track img {
+    border-radius: 5px;
+}
+.track audio {
+    height: 30px;
+    color: black;
+    width: 400px;
+}
+
+.trackList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .tracks {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 808px;
-    height: 110%;
-    background-color: black;
+
 }

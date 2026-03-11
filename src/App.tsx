@@ -1,15 +1,22 @@
 import { Logo } from "./ui/Logo";
+import { PageBar } from "./ui/pageBar";
 import { TracksList } from "./ui/TracksList";
+import style from './App.module.css';
+import styleList from "./ui/TrackList.module.css";
+import styleLogo from "./ui/Logo.module.css"
 
 function App () {
   return (
-    <div className="App" style={{display: 'flex', justifyContent: 'space-between', paddingLeft: 300,  paddingRight: 30}}>
-      <Logo/>
-      <TracksList/>
-      <div>
-        <h2>details</h2>
+    <div className={style.app}>
+      <div className={styleLogo.logo}>
+        <Logo/>
       </div>
+      <div className={styleList.tracks}>
+        <PageBar/>
+        <TracksList/>
+      </div>      
     </div>
+
   )
 }
 
