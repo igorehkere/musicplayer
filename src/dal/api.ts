@@ -1,5 +1,5 @@
-export function getTracks() {
-    const promise = fetch('https://musicfun.it-incubator.app/api/1.0/playlists/tracks', {
+export function getTracks(numPage: number) {
+    const promise = fetch(`https://musicfun.it-incubator.app/api/1.0/playlists/tracks?pageNumber=${numPage}`, {
             headers: {
                 'api-key': 'cf0ddaf7-318e-4876-b6f5-44884cf22e49',
             },

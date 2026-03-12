@@ -38,7 +38,7 @@
     position: sticky;
     top: 210px;
     overflow: hidden;
-    outline: 1px solid rgba(0, 0, 0, 0.3);
+    outline: 1px solid rgba(0, 0, 0, 0.589);
     outline-offset: 4px;
 }
 .track:hover {

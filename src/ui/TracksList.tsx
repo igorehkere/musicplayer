@@ -2,12 +2,33 @@ import style from "./TrackList.module.css"
 import { useState, useEffect } from "react"
 import { getTracks } from "../dal/api";
 
-export function TracksList () {
-    const [tracks, setTracks] = useState(null);
+type page = {
+    numPage: number,
+}
+type TrackListItemResource = {
+    id: number,
+    attributes: TrackListItemAttributes,
+}
+type TrackListItemAttributes = {
+    title: string,
+    attachments: Array<{
+        url: string,
+    }>,
+    images: TrackImages
+}
+
+type TrackImages = {
+    main: Array<{
+        url: string,
+    }>
+}
+
+export function TracksList ({numPage}: page) {
+    const [tracks, setTracks] = useState<Array<TrackListItemResource> | null>(null);
 
     useEffect(() => {
-        getTracks().then(js => setTracks(js.data))
-    }, []);
+        getTracks(numPage).then(js => setTracks(js.data))
+    }, [numPage]);
     if (tracks === null) {
         return (
             <img src="./src/download3.gif" height={50} width={50}/>
