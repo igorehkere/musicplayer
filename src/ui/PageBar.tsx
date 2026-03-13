@@ -17,7 +17,7 @@ export function PageBar({changeNumPage}: page) {
             }}>&lt;</button>            
             <span>{pageNum}</span>
             <button onClick={() => {
-                if (pageNum < 4) {
+                if (pageNum < 3) {
                     setPageNum(pageNum + 1);
                     changeNumPage(pageNum + 1); 
                 }

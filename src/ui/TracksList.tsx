@@ -25,6 +25,9 @@ type TrackImages = {
 
 export function TracksList ({numPage}: page) {
     const [tracks, setTracks] = useState<Array<TrackListItemResource> | null>(null);
+    const [selectedTrackId, setSelectedTrackId] = useState<number | null>(null);
+
+
 
     useEffect(() => {
         getTracks(numPage).then(js => setTracks(js.data))
@@ -38,7 +41,9 @@ export function TracksList ({numPage}: page) {
         <div className={style.trackList}>
             {tracks.map(track => {
                     return (
-                        <div className={style.track} key={track.id}>
+                        <div className={style.track} style={{borderColor: selectedTrackId === track.id ? 'green' : 'white'}} key={track.id} onClick={() => {
+                            setSelectedTrackId(track.id);
+                        }}>
                             <img src={track.attributes.images.main[2] ? track.attributes.images.main[2].url : './src/logo.png'} height={56} width={56}/>
                             <div className={style.trackElem}>
                                 <span>{track.attributes.title}</span>
