@@ -4,9 +4,10 @@ import { getTracks } from "../dal/api";
 
 type page = {
     numPage: number,
+    getTrackDetail: (id: string) => void,
 }
 type TrackListItemResource = {
-    id: number,
+    id: string,
     attributes: TrackListItemAttributes,
 }
 type TrackListItemAttributes = {
@@ -23,9 +24,9 @@ type TrackImages = {
     }>
 }
 
-export function TracksList ({numPage}: page) {
+export function TracksList ({numPage, getTrackDetail}: page) {
     const [tracks, setTracks] = useState<Array<TrackListItemResource> | null>(null);
-    const [selectedTrackId, setSelectedTrackId] = useState<number | null>(null);
+    const [selectedTrackId, setSelectedTrackId] = useState<string | null>(null);
 
 
 
@@ -43,6 +44,7 @@ export function TracksList ({numPage}: page) {
                     return (
                         <div className={style.track} style={{borderColor: selectedTrackId === track.id ? 'green' : 'white'}} key={track.id} onClick={() => {
                             setSelectedTrackId(track.id);
+                            getTrackDetail(track.id)
                         }}>
                             <img src={track.attributes.images.main[2] ? track.attributes.images.main[2].url : './src/logo.png'} height={56} width={56}/>
                             <div className={style.trackElem}>

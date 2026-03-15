@@ -1,0 +1,17 @@
+.details {
+    color: white;
+    border: 2px solid white;
+    position: fixed;
+    width: 400px;
+    top: 150px;
+    left: 1000px;
+    z-index: 4;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+.det {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
