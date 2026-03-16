@@ -1,38 +1,14 @@
 import style from "./TrackList.module.css"
-import { useState, useEffect } from "react"
-import { getTracks } from "../dal/api";
+import { useTracks } from "../bll/useTracks";
 
 type page = {
     numPage: number,
     getTrackDetail: (id: string) => void,
 }
-type TrackListItemResource = {
-    id: string,
-    attributes: TrackListItemAttributes,
-}
-type TrackListItemAttributes = {
-    title: string,
-    attachments: Array<{
-        url: string,
-    }>,
-    images: TrackImages
-}
 
-type TrackImages = {
-    main: Array<{
-        url: string,
-    }>
-}
 
 export function TracksList ({numPage, getTrackDetail}: page) {
-    const [tracks, setTracks] = useState<Array<TrackListItemResource> | null>(null);
-    const [selectedTrackId, setSelectedTrackId] = useState<string | null>(null);
-
-
-
-    useEffect(() => {
-        getTracks(numPage).then(js => setTracks(js.data))
-    }, [numPage]);
+    const { tracks, selectedTrackId, setSelectedTrackId} = useTracks(numPage);
     if (tracks === null) {
         return (
             <img src="./src/download3.gif" height={50} width={50}/>
@@ -46,7 +22,7 @@ export function TracksList ({numPage, getTrackDetail}: page) {
                             setSelectedTrackId(track.id);
                             getTrackDetail(track.id)
                         }}>
-                            <img src={track.attributes.images.main[2] ? track.attributes.images.main[2].url : './src/logo.png'} height={56} width={56}/>
+                            <img src={track.attributes.images.main[2] ? track.attributes.images.main[2].url : './src/notcover.png'} height={56} width={56}/>
                             <div className={style.trackElem}>
                                 <span>{track.attributes.title}</span>
                                 <audio controls src={track.attributes.attachments[0].url}></audio>

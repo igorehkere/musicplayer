@@ -9,9 +9,35 @@
     border-radius: 8px;
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    /* background-color: aqua; */
 }
 .det {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    /* background-color: antiquewhite; */
+}
+.icon {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.det h1 {
+    padding-bottom: 20px;
+}
+
+.det h2 {
+    padding-top: 20px;
+}
+.likes {
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+    font-size: 18px;
+    padding-top: 10px;
+}
+.likes img:hover {
+    cursor: pointer;
 }
