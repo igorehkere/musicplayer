@@ -26,6 +26,7 @@ export function useTracks (numPage: number) {
     
     
     useEffect(() => {
+        setTracks(null);
         getTracks(numPage).then(js => setTracks(js.data))
     }, [numPage]);
 

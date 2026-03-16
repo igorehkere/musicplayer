@@ -18,11 +18,14 @@ type TrackDetailsAttributes = {
 }
 
 export function useDetails (selectedTrackId: string | null) {
+    const [selectLike, setSelectLike] = useState(false);
     const [track, setTrack] = useState<TrackDetailsResource | null>(null);
+
     useEffect(() => {
         if (!selectedTrackId) return
         getTrack(selectedTrackId).then(js => setTrack(js.data))
+        setSelectLike(false)
     }, [selectedTrackId])
 
-    return {track}
+    return {track, selectLike, setSelectLike}
 }

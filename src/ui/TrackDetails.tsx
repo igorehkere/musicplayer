@@ -2,7 +2,7 @@ import style from "./TrackDetails.module.css"
 import { useDetails } from "../bll/useDetails";
 
 export function TrackDetails ({selectedTrackId}: {selectedTrackId: string | null}) {
-    const {track} = useDetails(selectedTrackId);
+    const {track, selectLike, setSelectLike} = useDetails(selectedTrackId);
 
     return (
         <>
@@ -17,7 +17,9 @@ export function TrackDetails ({selectedTrackId}: {selectedTrackId: string | null
                     <h2>Текст</h2>
                     <span>{track.attributes.lyrics ?? 'Текст не найден'}</span>
                     <div className={style.likes}>
-                        <img src='./src/likeimage.png' height={30} width={30}/>
+                        <img src={selectLike ? './src/likeimageselect.png' : './src/likeimage.png'} height={30} width={30} onClick={() => {
+                            setSelectLike(!selectLike);
+                        }}/>
                         <span>{track.attributes.likesCount}</span>
                     </div>
                 </div>
