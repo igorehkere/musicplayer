@@ -1,0 +1,37 @@
+.player {
+    background-image: linear-gradient(to right, black, rgb(33, 33, 33), rgb(33, 33, 33), rgb(33, 33, 33),  black);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 808px;
+    height: 86px;
+}
+.startstop:hover {
+    cursor: pointer;
+}
+.album {
+    background-color: none;
+    display: flex;
+}
+.album img {
+    border-radius: 12px;
+    margin-right: 10px;
+}
+.album input {
+    accent-color: #1DB954;
+}
+.album input:focus {
+    outline: none;
+}
+.volume {
+    display: flex;
+}
+.volume img {
+    padding-right: 10px;
+}
+.volume input {
+    accent-color: white;
+}
+.volume input:focus {
+    outline: none;
+}

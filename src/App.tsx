@@ -1,5 +1,5 @@
 import { Logo } from "./ui/Logo";
-import { PageBar } from "./ui/pageBar";
+import { PageBar } from "./ui/PageBar";
 import { TracksList } from "./ui/TracksList";
 import style from './App.module.css';
 import styleList from "./ui/TrackList.module.css";

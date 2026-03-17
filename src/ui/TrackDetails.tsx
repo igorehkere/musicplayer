@@ -11,9 +11,9 @@ export function TrackDetails ({selectedTrackId}: {selectedTrackId: string | null
                 {selectedTrackId && track && track.id !== selectedTrackId && <img src="./src/download3.gif" height={50} width={50}/>}
                 {selectedTrackId && track && track.id === selectedTrackId && 
                 <div className={style.det}>
-                    <img className={style.icon} src={track.attributes.images.main[0] ? track.attributes.images.main[0].url : './src/notcover.png'} height={300} width={300}/>
+                    <img className={style.icon} src={track.attributes.images.main[0] ? track.attributes.images.main[0].url : './src/notcover.png'} height={234} width={234}/>
                     <h1>{track.attributes.title}</h1>
-                    <hr style={{width: '100%'}}/>
+                    <hr style={{width: '100%', color: 'green'}}/>
                     <h2>Текст</h2>
                     <span>{track.attributes.lyrics ?? 'Текст не найден'}</span>
                     <div className={style.likes}>

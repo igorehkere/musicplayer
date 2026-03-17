@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     position: sticky;
+    background-color: black;
     top: 102px;
     gap: 10px;
     padding-top: 30px;
@@ -34,7 +35,6 @@
     border: 2px solid white;
     border-radius: 10px;
     padding: 6px;
-    background-color: black;
     position: sticky;
     top: 210px;
     overflow: hidden;
@@ -58,7 +58,7 @@
 }
 .track audio {
     height: 30px;
-    color: black;
+
     width: 400px;
 }
 
