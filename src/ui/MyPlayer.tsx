@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
 import style from './MyPlayer.module.css'
-import { useAudioPlayer } from "react-use-audio-player";
+import { usePlayer } from "../bll/usePlayer";
 
 type exportTrack = {
     src: string,
@@ -8,19 +7,7 @@ type exportTrack = {
     handleClick: () => void
 }
 export function MyPlayer ({src, image, handleClick}: exportTrack) {
-  const { isPlaying, togglePlayPause, setVolume, seek, getPosition, duration } = useAudioPlayer(src);
-  const [currentTime, setCurrentTime] = useState(0);
-  useEffect(() => {
-    let interval: number;
-    
-    if (isPlaying) {
-      interval = setInterval(() => {
-        setCurrentTime(getPosition());
-      }, 100); // 100 миллисекунд
-    }
-    
-    return () => clearInterval(interval); // очищаем при остановке
-  }, [isPlaying, getPosition]);
+  const {isPlaying, togglePlayPause, setVolume, seek, duration, currentTime} = usePlayer(src)
   return (
     <div className={style.player}>
       <img className={style.startstop} src={isPlaying ? './src/pause.png': './src/play.png'} height={30} width={30} onClick={() => {

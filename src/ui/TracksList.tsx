@@ -9,7 +9,7 @@ type page = {
 
 
 export function TracksList ({numPage, getTrackDetail}: page) {
-    const { tracks, selectedTrackId, setSelectedTrackId} = useTracks(numPage);
+    const { tracks, setSelectedTrackId} = useTracks(numPage);
     if (tracks === null) {
         return (
             <img src="./src/download3.gif" height={50} width={50}/>
