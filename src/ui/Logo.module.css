@@ -1,6 +1,6 @@
 .logo img {
-    height: 100px;
-    width: 200px;
+    height: 48px;
+    width: 123px;
 }
 
 .logo {
@@ -8,4 +8,8 @@
     background-color: #212121;
     position: sticky;
     top: 0;
+    height: 102px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
 }

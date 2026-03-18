@@ -16,6 +16,7 @@ export function TrackDetails ({selectedTrackId}: {selectedTrackId: string | null
                     <hr style={{width: '100%', color: 'green'}}/>
                     <h2>Текст</h2>
                     <span>{track.attributes.lyrics ?? 'Текст не найден'}</span>
+                    <hr style={{width: '100%', color: 'green'}}/>
                     <div className={style.likes}>
                         <img src={selectLike ? './src/likeimageselect.png' : './src/likeimage.png'} height={30} width={30} onClick={() => {
                             setSelectLike(!selectLike);

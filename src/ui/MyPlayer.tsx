@@ -5,8 +5,9 @@ import { useAudioPlayer } from "react-use-audio-player";
 type exportTrack = {
     src: string,
     image: string,
+    handleClick: () => void
 }
-export function MyPlayer ({src, image}: exportTrack) {
+export function MyPlayer ({src, image, handleClick}: exportTrack) {
   const { isPlaying, togglePlayPause, setVolume, seek, getPosition, duration } = useAudioPlayer(src);
   const [currentTime, setCurrentTime] = useState(0);
   useEffect(() => {
@@ -26,7 +27,9 @@ export function MyPlayer ({src, image}: exportTrack) {
         togglePlayPause()
       }}/>
       <div className={style.album}>
-        <img src={image} height={54} width={54}/>
+        <img src={image} height={54} width={54} onClick={() => {
+            handleClick();
+        }}/>
         <input 
         type='range'
         min={0}

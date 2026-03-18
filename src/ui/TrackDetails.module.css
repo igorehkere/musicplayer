@@ -4,11 +4,12 @@
     position: fixed;
     width: 298px;
     top: 102px;
-    right: 10px;
+    right: 0px;
     z-index: 4;
     display: flex;
     justify-content: center;
     overflow: hidden;
+
 }
 .det {
     display: flex;
@@ -25,9 +26,6 @@
     padding-bottom: 20px;
 }
 
-.det h2 {
-    padding-top: 20px;
-}
 .likes {
     display: flex;
     align-items: center;

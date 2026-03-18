@@ -17,6 +17,9 @@
     border-radius: 12px;
     margin-right: 10px;
 }
+.album img:hover {
+    cursor: pointer;
+}
 .album input {
     accent-color: #1DB954;
 }
