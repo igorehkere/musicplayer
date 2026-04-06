@@ -23,7 +23,7 @@ export function TracksList ({numPage, getTrackDetail}: page) {
                             getTrackDetail(track.id)                       
                     }
                     return (
-                        <div>
+                        <div key={track.id}>
                             <MyPlayer handleClick = {handleClick} src={track.attributes.attachments[0].url} image={track.attributes.images.main[2] ? track.attributes.images.main[2].url : './src/notcover.png'}/>    
                         </div>
                     )
