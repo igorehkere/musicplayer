@@ -1,3 +1,6 @@
+
+<a id="readme-top"></a>
+
 # MusicPlayer
 
 A web player for listening to music from an external API. Tracks are loaded page by page, and you can view details (cover art, lyrics, likes). The project is written in TypeScript using React.
@@ -78,3 +81,5 @@ MIT
 ## Author
 
 Igorehkere
+
+<p align='right'><a href='#readme-top'>Back to top</a></p>
