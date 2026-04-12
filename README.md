@@ -1,4 +1,4 @@
-## MusicPlayer
+# MusicPlayer
 
 A web player for listening to music from an external API. Tracks are loaded page by page, and you can view details (cover art, lyrics, likes). The project is written in TypeScript using React.
 
@@ -31,31 +31,38 @@ A web player for listening to music from an external API. Tracks are loaded page
 
 ## Project Structure
 
-src/
-├── bll/ 
-│ ├── usePlayer.ts 
-│ ├── useTracks.ts 
-│ └── useDetails.ts 
-├── dal/ 
-│ └── api.ts 
-├── components/ 
-│ ├── MyPlayer.tsx 
-│ ├── TracksList.tsx 
-│ ├── TrackDetails.tsx 
-│ ├── PageBar.tsx 
-│ └── Logo.tsx 
-├── styles/ 
-├── assets/ 
-├── App.tsx
-├── main.tsx
-└── index.css
+src/  
+├── bll/   
+│ ├── usePlayer.ts   
+│ ├── useTracks.ts   
+│ └── useDetails.ts   
+├── dal/   
+│ └── api.ts   
+├── components/   
+│ ├── MyPlayer.tsx   
+│ ├── TracksList.tsx   
+│ ├── TrackDetails.tsx   
+│ ├── PageBar.tsx   
+│ └── Logo.tsx   
+├── styles/   
+├── assets/   
+├── App.tsx  
+├── main.tsx  
+└── index.css  
 
 ## Installation and Run
-
+```sh
 git clone https://github.com/igorehkere/musicplayer
+```
+```sh
 cd musicplayer
+```
+```sh
 npm install
+```
+```sh
 npm run dev
+```
 
 ## Implementation Features
 
